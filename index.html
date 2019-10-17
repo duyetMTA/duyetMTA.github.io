@@ -7,13 +7,14 @@
     <meta property="og:title" content="HaPpY Womanday">
     <meta property="og:description" content="Download here: https://www.facebook.com/groups/j2team.community/">
     <meta property="og:image" content="https://j2team.github.io/demo/wedding-001/images/slider-1400x933.jpg">
-    <meta property="og:site_name" content="J2TEAM Community">
+    <meta property="og:site_name" content="DUYET PHAM">
 
     <link media="all" href="css/autoptimize_5eaa825ed5418fe7c35cba15f004d85e.css" rel="stylesheet"/>
+    <link type="text/css" href="css/style.css" rel="stylesheet" />
     <link media="only screen and (max-width: 768px)" href="css/autoptimize_57afcea827824d1db313888418fe13fa.css"
           rel="stylesheet"/>
     <link media="screen" href="css/autoptimize_abea50eb5cad43656f88878872d6f753.css" rel="stylesheet"/>
-    <title>Demo Wedding 001 – J2TEAM Community</title>
+    <title>Demo Wedding 001 – DUYET PHAM</title>
     <link rel='dns-prefetch' href='//ajax.aspnetcdn.com'/>
     <link rel='dns-prefetch' href='//ajax.googleapis.com'/>
     <link rel='dns-prefetch' href='//fonts.googleapis.com'/>
@@ -61,6 +62,49 @@
         });
 
     </script>
+    <script language="javascript">
+	/***************************************************************************************
+	* Run when page load
+	***************************************************************************************/
+	$(document).ready(function()
+	{
+		initSlideShow();
+		
+	});
+	/***************************************************************************************
+	****************************************************************************************/
+	function initSlideShow()
+	{
+		if($(".slideshow div").length > 1) //Only run slideshow if have the slideshow element and have more than one image.
+		{
+			var transationTime = 5000;//5000 mili seconds i.e 5 second
+			$(".slideshow div:first").addClass('active'); //Make the first image become active i.e on the top of other images
+			setInterval(slideChangeImage, transationTime); //set timer to run the slide show.
+		}
+	}
+	/***************************************************************************************
+	****************************************************************************************/
+	
+	function slideChangeImage()
+	{
+		var active = $(".slideshow div.active"); //Get the current active element.
+		if(active.length == 0)
+		{
+			active = $(".slideshow div:last"); //If do not see the active element is the last image.
+		}
+		
+		var next = active.next().length ? active.next() : $(".slideshow div:first"); //get the next element to do the transition
+		active.addClass('lastactive');
+		next.css({opacity:0.0}) //do the fade in fade out transition
+				.addClass('active')
+				.animate({opacity:1.0}, 1500, function()
+				{
+					active.removeClass("active lastactive");	
+				});
+		 
+	}
+
+</script>
 </head>
 
 <body class="page page-id-1556 page-template page-template-template-one-page page-template-template-one-page-php"><a
@@ -84,8 +128,8 @@
                                                  src="images/IMG-20160403-WA0080.jpg" alt=""/> <img
                         class="wed_couple_header wed_white_couple animated extra"
                         src="images/IMG-20160403-WA0080.jpg" alt=""/>
-                    <div class="wed_text_container"><a href="https://www.facebook.com/chocon0612" class="wed_logo wed_logo_animation">DUYET & THUY</a>
-                        <div class="wed_logo_und">15.10-06.12</div>
+                    <div class="wed_text_container"><a href="https://www.facebook.com/chocon0612" class="wed_logo wed_logo_animation">NGUYEN THUY</a>
+                        <div class="wed_logo_und">06.12</div>
                     </div>
                 </div>
                 <div class="wed_top_menu_mobile_link"><i class="ti ti-menu"></i></div>
@@ -141,7 +185,7 @@
                                        href="#">
                                         <h2>Thanh Thúy</h2>
                                     </a>
-                                    <h4>Vợ Tớ</h4>
+                                    <h4>TỌC</h4>
                                 </div>
                             </div>
                         </div>
@@ -155,7 +199,7 @@
                                        href="#">
                                         <h2>Minh Duyệt</h2>
                                     </a>
-                                    <h4>Chồng Cậu</h4>
+                                    <h4>BOY</h4>
                                 </div>
                             </div>
                         </div>
@@ -250,7 +294,7 @@
                                                                              src="images/heart_1.png" alt=""> <img
                                                                 class="wed_second_heart_3" src="images/heart_2.png"
                                                                 alt=""></div>
-                                                        <div class=""><img src="images/object_19-61x60.png" alt="">
+                                                        <div class=""><img src="images/hiden1.jpg" alt="">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -558,7 +602,7 @@
                 </section>
             </div>
             <section class="wed_section_inner wed_image_bck wed_wht_txt wed_fixed  "
-                     style=background-image:url(images/bg_8.jpg); data-stellar-background-ratio="0.2">
+                     style=background-image:url(images/hiden1.jpg); data-stellar-background-ratio="0.2">
                 <div class="wed_over" data-color="#edc082" data-opacity="0.9"></div>
                 <div class="container text-center">
                     <h2 class="wed_section_title">Don't miss it!</h2>
@@ -571,7 +615,7 @@
                 </div>
             </section>
             <section class="wed_section_inner wed_image_bck wed_wht_txt wed_fixed  "
-                     style=background-image:url(images/bg_6.jpg); data-stellar-background-ratio="0.2">
+                     style=background-image:url(images/hiden2.jpg); data-stellar-background-ratio="0.2">
                 <div class="wed_over" data-color="#edc082" data-opacity="0.9"></div>
                 <div class="container text-center">
                     <div class="fw-row">
@@ -752,7 +796,182 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                                <div data-animation="animation_blocks" data-bottom="@class:noactive"
+                                     data--10-bottom="@class:active">
+                                    <div class="row wed_story_row">
+                                        <div class="col-sm-12 col-md-5 text-center wed_bd ">
+                                            <div class="wed_second_border wed_image_bck" data-border=""></div>
+                                            <div class="wed_portfolio_item wed_story_img">
+                                                <div class="wed_portfolio_item_cont wed_story_cont wed_image_bck"
+                                                     data-border=""><img class="wed_img_height"
+                                                                         src="images/tamdao2 (2).jpg" alt="">
+                                                    <span class="wed_port_titles"> <span class="wed_port_title"></span> <span
+                                                            class="wed_port_subtitle"></span> <span
+                                                            class="wed_port_icons"> <a
+                                                            href="images/tamdao2 (2).jpg" class="lightbox"><i
+                                                            class="ti ti-search"></i></a> </span> </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 hidden-sm hidden-xs text-center">
+                                            <div class="wed_story_center">
+                                                <div class="wed_story_content wed_image_bck" data-color="">
+                                                    <div class="wed_heart_container_row_2"><img
+                                                            class="wed_second_heart_1" src="images/heart_3.png" alt="">
+                                                        <img class="wed_second_heart_2" src="images/heart_1.png" alt="">
+                                                        <img class="wed_second_heart_3" src="images/heart_2.png" alt="">
+                                                    </div>
+                                                    <div class=""><img src="images/object_43-37x60.png" alt=""></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-5 ">
+                                            <div class="wed_story_txt">
+                                                <div class="wed_month_year">2019</div>
+                                                <h4>TAM ĐẢO</h4>
+                                                <p>Một ngày đẹp trời mình cùng lên TAm ĐẢO, cùng vui chơi cùng nhau ngắm cảnh, thật hạnh phúc.</p>
+                                            </div>
+                                        </div>
+                                        <div class="wed_vertical_line wed_line_top hidden-sm hidden-xs wed_image_bck"
+                                             data-border="">
+                                            <div class="wed_circle wed_image_bck" data-color=""></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-animation="animation_blocks" data-bottom="@class:noactive"
+                                     data--10-bottom="@class:active">
+                                    <div class="row wed_story_row">
+                                        <div class="col-sm-12 col-md-5 text-center wed_bd col-md-push-7">
+                                            <div class="wed_second_border wed_image_bck" data-border=""></div>
+                                            <div class="wed_portfolio_item wed_story_img">
+                                                <div class="wed_portfolio_item_cont wed_story_cont wed_image_bck"
+                                                     data-border=""><img class="wed_img_height"
+                                                                         src="images/tamdao2 (1).jpg" alt=""> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span> <span
+                                                        class="wed_port_subtitle"></span> <span
+                                                        class="wed_port_icons"> <a href="images/tamdao2 (1).jpg"
+                                                                                   class="lightbox"><i
+                                                        class="ti ti-search"></i></a> </span> </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 hidden-sm hidden-xs text-center">
+                                            <div class="wed_story_center">
+                                                <div class="wed_story_content wed_image_bck" data-color="">
+                                                    <div class="wed_heart_container_row_2"><img
+                                                            class="wed_second_heart_1" src="images/heart_3.png" alt="">
+                                                        <img class="wed_second_heart_2" src="images/heart_1.png" alt="">
+                                                        <img class="wed_second_heart_3" src="images/heart_2.png" alt="">
+                                                    </div>
+                                                    <div class=""><img src="images/object_118-55x60.png" alt=""></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-5 col-md-pull-7">
+                                            <div class="wed_story_txt">
+                                                <div class="wed_month_year">2019</div>
+                                                <h4>Có những ngày mình dong chơi</h4>
+                                                <p> Ngày mình đi bên nhau ấy là ngày đẹp trời thì theo anh đi chốn e ơi.</p>
+                                            </div>
+                                        </div>
+                                        <div class="wed_vertical_line wed_line_top hidden-sm hidden-xs wed_image_bck"
+                                             data-border="">
+                                            <div class="wed_circle wed_image_bck" data-color=""></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                  <div data-animation="animation_blocks" data-bottom="@class:noactive"
+                                     data--10-bottom="@class:active">
+                                    <div class="row wed_story_row">
+                                        <div class="col-sm-12 col-md-5 text-center wed_bd ">
+                                            <div class="wed_second_border wed_image_bck" data-border=""></div>
+                                            <div class="wed_portfolio_item wed_story_img">
+                                                <div class="wed_portfolio_item_cont wed_story_cont wed_image_bck"
+                                                     data-border=""><img class="wed_img_height"
+                                                                         src="images/tamdao2 (3).jpg" alt="">
+                                                    <span class="wed_port_titles"> <span class="wed_port_title"></span> <span
+                                                            class="wed_port_subtitle"></span> <span
+                                                            class="wed_port_icons"> <a
+                                                            href="images/tamdao2 (3).jpg" class="lightbox"><i
+                                                            class="ti ti-search"></i></a> </span> </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 hidden-sm hidden-xs text-center">
+                                            <div class="wed_story_center">
+                                                <div class="wed_story_content wed_image_bck" data-color="">
+                                                    <div class="wed_heart_container_row_2"><img
+                                                            class="wed_second_heart_1" src="images/heart_3.png" alt="">
+                                                        <img class="wed_second_heart_2" src="images/heart_1.png" alt="">
+                                                        <img class="wed_second_heart_3" src="images/heart_2.png" alt="">
+                                                    </div>
+                                                    <div class=""><img src="images/object_43-37x60.png" alt=""></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-5 ">
+                                            <div class="wed_story_txt">
+                                                <div class="wed_month_year">2019</div>
+                                                <h4>TAM ĐẢO</h4>
+                                                <p>Một ngày đẹp trời mình cùng lên TAm ĐẢO, cùng vui chơi cùng nhau ngắm cảnh, thật hạnh phúc.</p>
+                                            </div>
+                                        </div>
+                                        <div class="wed_vertical_line wed_line_top hidden-sm hidden-xs wed_image_bck"
+                                             data-border="">
+                                            <div class="wed_circle wed_image_bck" data-color=""></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <div data-animation="animation_blocks" data-bottom="@class:noactive"
+                                     data--10-bottom="@class:active">
+                                    <div class="row wed_story_row">
+                                        <div class="col-sm-12 col-md-5 text-center wed_bd ">
+                                            <div class="wed_second_border wed_image_bck" data-border=""></div>
+                                            <div class="wed_portfolio_item wed_story_img">
+                                                <div class="wed_portfolio_item_cont wed_story_cont wed_image_bck"
+                                                     data-border=""><img class="wed_img_height"
+                                                                         src="images/tamdao4.jpg" alt="">
+                                                    <span class="wed_port_titles"> <span class="wed_port_title"></span> <span
+                                                            class="wed_port_subtitle"></span> <span
+                                                            class="wed_port_icons"> <a
+                                                            href="images/tamdao4.jpg" class="lightbox"><i
+                                                            class="ti ti-search"></i></a> </span> </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 hidden-sm hidden-xs text-center">
+                                            <div class="wed_story_center">
+                                                <div class="wed_story_content wed_image_bck" data-color="">
+                                                    <div class="wed_heart_container_row_2"><img
+                                                            class="wed_second_heart_1" src="images/heart_3.png" alt="">
+                                                        <img class="wed_second_heart_2" src="images/heart_1.png" alt="">
+                                                        <img class="wed_second_heart_3" src="images/heart_2.png" alt="">
+                                                    </div>
+                                                    <div class=""><img src="images/object_43-37x60.png" alt=""></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-5 ">
+                                            <div class="wed_story_txt">
+                                                <div class="wed_month_year">2019</div>
+                                                <h4>TAM ĐẢO</h4>
+                                                <p>Đôi lúc cũng phải tạo dáng thật là sodeep, so cool....</p>
+                                            </div>
+                                        </div>
+                                        <div class="wed_vertical_line wed_line_top hidden-sm hidden-xs wed_image_bck"
+                                             data-border="">
+                                            <div class="wed_circle wed_image_bck" data-color=""></div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="slideshow">
+	<div><a href="#"><img src="images/tamdao5.jpg" alt="" border="0" /></a></div>
+	<div><a href="#"><img src="images/tamdao6.jpg" alt="" border="0" /></a></div>
+	<div><a href="#"><img src="images/tamdao7.jpg" alt="" border="0" /></a></div>
+	<div><a href="#"><img src="images/tamdao8.jpg" alt="" border="0" /></a></div>
+</div>
+
+                            
                         </div>
                     </div>
                 </div>
